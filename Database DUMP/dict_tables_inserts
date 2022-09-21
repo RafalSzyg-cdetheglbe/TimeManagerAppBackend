@@ -1,0 +1,26 @@
+INSERT INTO modification_type(modification_name)
+VALUES ('Stworzenie'),
+		('Edycja'),
+		('Usunięcie');
+
+INSERT INTO modification_objects(object_name)
+VALUES ('User'),
+		('Buckets'),
+		('Task'),
+		('Clients');
+
+INSERT INTO users_role(name, description, max_buckets)
+VALUES ('Administrator', 'Ma najwyższe uprawnienia w systemie i dostęp do wszystkich danych.', 9999),
+		('Kierownik', 'Rola pozwalająca na stworzenie 10 tablic z zadaniami', 10),
+		('Pracownik', 'Rola pozwalająca na stworzenie 5 tablic z zadaniami', 5);
+
+INSERT INTO states(name, description)
+VALUES ('Nowe', 'status nadawany automatycznie nowo dodanym zadaniom'),
+		('W trakcie', 'tryb gotowości zadania, timer może zostać uruchomiony w każdej chwili'),
+		('Zawieszone', 'uruchomienie stopera nie jest możliwe dla tego zadania'),
+		('Ukończone', '- brak możliwości jakiejkolwiek edycji poza przywróceniem poprzedniego statusu. Stan zadania osiągalny dopiero po akceptacji');
+
+INSERT INTO priorities(name, description, notification_time)
+VALUES ('Niski', 'Mail z powiadomieniem zostanie wysłany 12 godzin przed terminem zakończenia zadania', 43200),
+		('Normalny', 'mail z przypomnieniem zostanie wysłany 2 dni przed terminem zakończenia zadania', 172800),
+		('Wysoki', 'mail z przypomnieniem zostanie wysłany 3 dni przed terminem ostatecznym', 259200);

@@ -1,0 +1,1919 @@
+{
+	"info": {
+		"_postman_id": "38b1d4e6-9da6-4458-82da-480a10329ec8",
+		"name": "Timemanager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21791281"
+	},
+	"item": [
+		{
+			"name": "buckets",
+			"item": [
+				{
+					"name": "showListOfBuckets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjE0OTZ9.1PeL9C8-zHzA_8nMVIIyuUjSIyo0VDtPTDv8OcUO-oE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/buckets",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"buckets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showBucket",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjE0OTZ9.1PeL9C8-zHzA_8nMVIIyuUjSIyo0VDtPTDv8OcUO-oE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/buckets/184",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"buckets",
+								"184"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addBucket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjE0OTZ9.1PeL9C8-zHzA_8nMVIIyuUjSIyo0VDtPTDv8OcUO-oE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "registrationId",
+								"value": "<calculated when request is sent>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Projekt1\",\r\n    \"description\" : \"description\",\r\n    \"max_tasks\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/buckets",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"buckets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editBucket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjE0OTZ9.1PeL9C8-zHzA_8nMVIIyuUjSIyo0VDtPTDv8OcUO-oE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"tablica2 historia\",\r\n    \"description\": \"to jest tablica2\",\r\n    \"max_tasks\" : 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/buckets/189",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"buckets",
+								"189"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteBucket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjE0OTZ9.1PeL9C8-zHzA_8nMVIIyuUjSIyo0VDtPTDv8OcUO-oE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/buckets/190",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"buckets",
+								"190"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "showListOfTasksInBucket",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjE0OTZ9.1PeL9C8-zHzA_8nMVIIyuUjSIyo0VDtPTDv8OcUO-oE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"bucketId\":184}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tasks?bucketId=184",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "bucketId",
+									"value": "184"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "taskView",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjE0OTZ9.1PeL9C8-zHzA_8nMVIIyuUjSIyo0VDtPTDv8OcUO-oE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tasks/89",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"89"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addTask",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjE0OTZ9.1PeL9C8-zHzA_8nMVIIyuUjSIyo0VDtPTDv8OcUO-oE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"TaskOverload\",\r\n    \"description\" : \"project\",\r\n    \"userId\": 1,\r\n    \"bucketId\": 4,\r\n    \"stateId\":1,\r\n    \"deadline\":\"2018-11-03T12:45:30\",\r\n    \"estimatedEndTime\":\"2019-11-03T12:45:30\",\r\n    \"priorityId\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tasks",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editTask",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjE0OTZ9.1PeL9C8-zHzA_8nMVIIyuUjSIyo0VDtPTDv8OcUO-oE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"task42\",\r\n    \"description\": \"to jest task4\",\r\n    \"userId\": 1,\r\n    \"deadline\": \"2022-07-19T06:16:43.914\",\r\n    \"priorityId\": \"1\",\r\n    \"optional_realization_time\": \"2022-07-19T06:16:43.914\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tasks/92",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"92"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTask",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjE0OTZ9.1PeL9C8-zHzA_8nMVIIyuUjSIyo0VDtPTDv8OcUO-oE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tasks/92",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"92"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowAllTasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjE0OTZ9.1PeL9C8-zHzA_8nMVIIyuUjSIyo0VDtPTDv8OcUO-oE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/tasks/all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowOutsideTasks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjE0OTZ9.1PeL9C8-zHzA_8nMVIIyuUjSIyo0VDtPTDv8OcUO-oE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tasks/outside",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"outside"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "getAccount",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjE0OTZ9.1PeL9C8-zHzA_8nMVIIyuUjSIyo0VDtPTDv8OcUO-oE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/account",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjE0OTZ9.1PeL9C8-zHzA_8nMVIIyuUjSIyo0VDtPTDv8OcUO-oE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users/35",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showUsersList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjE0OTZ9.1PeL9C8-zHzA_8nMVIIyuUjSIyo0VDtPTDv8OcUO-oE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjE0OTZ9.1PeL9C8-zHzA_8nMVIIyuUjSIyo0VDtPTDv8OcUO-oE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"emailrgtdegdfdfd@gmail.com\",\r\n    \"password\" : \"G12345!\",\r\n    \"firstName\" : \"Paul\",\r\n    \"lastName\" : \"Johnson\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInVzZXJSb2xlIjoiQWRtaW5pc3RyYXRvciIsImlhdCI6MTY2MTQyMDQ5NCwiZXhwIjoxNjYxNDIwNjk0fQ.cTfGjRy9uTS4T7pcn-nWQqRuk-X48OEY9EosWggC-V4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"user1@mail.com\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"TestTestmaidfdfdlTest@mail.com\",\r\n    \"password\": \"password\",\r\n    \"firstName\": \"Test\",\r\n    \"lastName\": \"Test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NTAwODR9.P7dDoBS2jqBx2Xmw5ak9fDITNedSxBD0czbuEwTDIBs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Adam\",\r\n    \"lastName\": \"new last_name\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users/15",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"15"
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "\"dundee\"",
+									"disabled": true
+								},
+								{
+									"key": "lastName",
+									"value": "\"paraglyd\"",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "\"edytowany@email.com\"",
+									"disabled": true
+								},
+								{
+									"key": "userRole",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "isActive",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logoutUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjA2NzN9.61ZrOO3pFu4zGlRzFmk4Gb_pMqzVN2sYj8IOmKgvorE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editOwnProfile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NDQ1NzZ9.VxGvaGmgOzjCaC97bcqX824YDX1aEajkj_rsnZW1csc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"new first_name\",\r\n    \"lastName\": \"new last_name\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/account",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addClient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjQ4ODF9.htz1Q0l10mTUyXzuJfPJDnIcKrkc--WPIE6JLOjiE5s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"client\",\r\n    \"lastName\":\"client last\",\r\n    \"email\":\"client@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/client",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refreshToken",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjQ4ODF9.htz1Q0l10mTUyXzuJfPJDnIcKrkc--WPIE6JLOjiE5s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/token/refresh",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"token",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "timers",
+			"item": [
+				{
+					"name": "ShowOneTimer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NDQ1NzZ9.VxGvaGmgOzjCaC97bcqX824YDX1aEajkj_rsnZW1csc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/timers/17",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"timers",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showAllActiveTimers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NDQ1NzZ9.VxGvaGmgOzjCaC97bcqX824YDX1aEajkj_rsnZW1csc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/timers/all/active",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"timers",
+								"all",
+								"active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowAllTimers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NDQ1NzZ9.VxGvaGmgOzjCaC97bcqX824YDX1aEajkj_rsnZW1csc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/timers/all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"timers",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showAllUserTimers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/user/timers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"timers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowUserTimersInTask",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/user/tasks/timers?taskId=58",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"tasks",
+								"timers"
+							],
+							"query": [
+								{
+									"key": "taskId",
+									"value": "58"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowAllTimersInTask",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/tasks/timers?taskId=58",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"timers"
+							],
+							"query": [
+								{
+									"key": "taskId",
+									"value": "58"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addTimer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"taskId\": 44,\r\n    \"startTime\": null,\r\n    \"startPause\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/timers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"timers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "startTimer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/timers/start/47",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"timers",
+								"start",
+								"47"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pauseTimer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/timers/pause/47",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"timers",
+								"pause",
+								"47"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stopTimer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/timers/46",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"timers",
+								"46"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "task_members",
+			"item": [
+				{
+					"name": "getTaskMembers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tasks/task_members/75",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"task_members",
+								"75"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addTaskMembers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"userId\": 15,\r\n   \"taskId\":75 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tasks/task_members",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"task_members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delUserFromTaskMembers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/tasks/task_members?task_id=75&user_id=15",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"task_members"
+							],
+							"query": [
+								{
+									"key": "task_id",
+									"value": "75"
+								},
+								{
+									"key": "user_id",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bucket_members",
+			"item": [
+				{
+					"name": "getBucketMembers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NTQwMDZ9.egH0iulqVg96eK0yPEnIo88ZNirqT7qiBSHr47ij6AU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\r\n//     \"bucket_id\": 1\r\n// }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/buckets/bucket_members?bucketId=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"buckets",
+								"bucket_members"
+							],
+							"query": [
+								{
+									"key": "bucketId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addUserToBucketMembers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU5JU1RSQVRPUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwOTAvbG9naW4iLCJleHAiOjE2NjE4NjE0OTZ9.1PeL9C8-zHzA_8nMVIIyuUjSIyo0VDtPTDv8OcUO-oE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"userId\": 37,\r\n   \"bucketId\":184\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/buckets/bucket_members",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"buckets",
+								"bucket_members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delUserFromBucketMembers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/buckets/bucket_members/35",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"buckets",
+								"bucket_members",
+								"35"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "states",
+			"item": [
+				{
+					"name": "getState",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/states/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"states",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getStates",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/states",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"states"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "roles",
+			"item": [
+				{
+					"name": "getRole",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/roles/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"roles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getRoles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/roles",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "priorities",
+			"item": [
+				{
+					"name": "getPriority",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/priorities/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"priorities",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPriorities",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/priorities",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"priorities"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "modification_types",
+			"item": [
+				{
+					"name": "getModificationType",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/modification_types/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"modification_types",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getModificationTypes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/modification_types",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"modification_types"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "modification_objects",
+			"item": [
+				{
+					"name": "getModificationObject",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/modification_objects/1 ",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"modification_objects",
+								"1 "
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getModificationObjects",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/modification_objects",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"modification_objects"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "modification_history",
+			"item": [
+				{
+					"name": "getModificationHistory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_premission\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/modification_history",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"modification_history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getElementHistory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb1Rlc3R1QG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9LSUVST1dOSUsiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2xvZ2luIiwiZXhwIjoxNjYxODQ1MjAyfQ.uuEF6r5m1-fTK6h1zg7cyd6xwkIMxflVSJYqwDMAuOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/modification_history/1 ",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"modification_history",
+								"1 "
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:8000"
+		}
+	]
+}

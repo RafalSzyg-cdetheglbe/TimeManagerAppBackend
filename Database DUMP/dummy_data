@@ -1,0 +1,45 @@
+INSERT INTO users(email, password, first_name, last_name)
+VALUES ('a.brzezinski@company.com', 'TYPICAL_password', 'Adam', 'Brzeziński'),
+		('e.byers@company.com', 'TYPICAL_password', 'Emma', 'Byers'),
+		('m.pitts@company.com', 'TYPICAL_password', 'Martin', 'Pitts'),
+		('n.mcknight@company.com', 'TYPICAL_password', 'Nafisa', 'Mcknight');
+		
+INSERT INTO buckets(name, description, user_id, max_tasks)
+VALUES ('bucket 1', 'To jest tablica', 1, 5),
+		('Time manager', 'kanban dotyczący aplikacji time manager', 2, 30),
+		('Trello clone', 'kopia trello', 4, 80);
+	
+INSERT INTO tasks(name, user_id, bucket_id, deadline)
+VALUES ('projekt bazy danych', 2, 2, '2016-06-22 19:10:25-07'),
+		('rozplanowanie projektu', 1, 3, '2018-06-22 19:10:25-07'),
+		('dokumentowanie projektu', 1, 3, '2019-06-22 19:10:25-07');
+
+
+INSERT INTO bucket_members(user_id, bucket_id)
+VALUES (1, 3),
+		(1, 2),
+		(2,1);	
+		
+INSERT INTO modifications_history(user_id, modification_type, object_type, object_id)
+VALUES (1,1,1,1),
+		(1,2,1,3),
+		(2,1,3,1);
+		
+INSERT INTO clients(email, first_name, last_name, project_name)
+VALUES ('n.potts@company.com', 'Nel', 'Potts', 'trello clone'),
+		('a.rice@company.com', 'Aine', 'Rice', 'facebook');
+		
+INSERT INTO notifications(task_id, notifications, client_id)
+VALUES (1, 'wszystko ok', 2),
+		(3, 'mamy małe problemy', 1);
+		
+INSERT INTO active_timers(task_id, user_id)
+VALUES (1,1),
+		(1,2),
+		(2,1);
+		
+INSERT INTO task_members(user_id, task_id)
+VALUES (1,1),
+		(1,2),
+		(2,1);
+

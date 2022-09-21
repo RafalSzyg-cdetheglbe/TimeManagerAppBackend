@@ -1,0 +1,153 @@
+CREATE TABLE "users" (
+  "id" SERIAL PRIMARY KEY,
+  "email" varchar UNIQUE NOT NULL,
+  "password" varchar NOT NULL,
+  "first_name" varchar NOT NULL,
+  "last_name" varchar NOT NULL,
+  "user_premission" int NOT NULL DEFAULT 3,
+  "active_buckets" int NOT NULL DEFAULT 0,
+  "is_active" boolean NOT NULL DEFAULT TRUE,
+  "is_deleted" boolean NOT NULL DEFAULT FALSE,
+  "created_date" timestamp NOT NULL DEFAULT now()
+);
+
+CREATE TABLE "users_role" (
+  "id" SERIAL PRIMARY KEY,
+  "name" varchar,
+  "description" varchar,
+  "max_buckets" int
+);
+
+CREATE TABLE "bucket_members" (
+  "id" SERIAL PRIMARY KEY,
+  "user_id" int NOT NULL,
+  "bucket_id" int NOT NULL,
+  "is_deleted" boolean NOT NULL DEFAULT TRUE
+);
+
+CREATE TABLE "buckets" (
+  "id" SERIAL PRIMARY KEY,
+  "name" varchar NOT NULL,
+  "description" varchar,
+  "user_id" int NOT NULL,
+  "active_tasks" int DEFAULT 0,
+  "last_change" timestamp DEFAULT NULL,
+  "created_date" timestamp NOT NULL DEFAULT now(),
+  "max_tasks" int NOT NULL DEFAULT 10,
+  "is_deleted" boolean NOT NULL DEFAULT FALSE
+);
+
+CREATE TABLE "tasks" (
+  "id" SERIAL PRIMARY KEY,
+  "name" varchar NOT NULL,
+  "description" varchar,
+  "user_id" int NOT NULL,
+  "bucket_id" int NOT NULL,
+  "state_id" int NOT NULL DEFAULT 1,
+  "created_date" timestamp NOT NULL DEFAULT now(),
+  "deadline" timestamp DEFAULT NULL,
+  "task_realization_time" int DEFAULT 0,
+  "priority_id" int DEFAULT 1,
+  "last_change" timestamp,
+  "estimated_end_time" timestamp DEFAULT NULL,
+  "is_deleted" boolean NOT NULL DEFAULT FALSE
+);
+
+CREATE TABLE "notifications" (
+  "id" SERIAL PRIMARY KEY,
+  "task_id" int NOT NULL,
+  "notifications" varchar,
+  "client_id" int NOT NULL,
+  "is_deleted" boolean NOT NULL DEFAULT FALSE
+);
+
+CREATE TABLE "clients" (
+  "id" SERIAL PRIMARY KEY,
+  "email" varchar NOT NULL,
+  "first_name" varchar,
+  "last_name" varchar,
+  "project_name" varchar,
+  "is_deleted" boolean NOT NULL DEFAULT FALSE
+);
+
+CREATE TABLE "priorities" (
+  "id" SERIAL PRIMARY KEY,
+  "name" varchar,
+  "description" varchar,
+  "notification_time" int
+);
+
+CREATE TABLE "states" (
+  "id" SERIAL PRIMARY KEY,
+  "name" varchar,
+  "description" varchar
+);
+
+CREATE TABLE "active_timers" (
+  "id" SERIAL PRIMARY KEY,
+  "task_id" int NOT NULL,
+  "user_id" int NOT NULL,
+  "start_time" timestamp,
+  "start_pause" timestamp,
+  "is_paused" boolean DEFAULT FALSE,
+  "timer_realization_time" int DEFAULT 0,
+  "is_deleted" boolean NOT NULL DEFAULT FALSE
+);
+
+CREATE TABLE "modifications_history" (
+  "id" SERIAL PRIMARY KEY,
+  "modification_date" timestamp NOT NULL DEFAULT now(),
+  "user_id" int NOT NULL,
+  "modification_type" int NOT NULL,
+  "object_type" int NOT NULL,
+  "object_id" int NOT NULL
+);
+
+CREATE TABLE "task_members" (
+  "id" SERIAL PRIMARY KEY,
+  "user_id" int NOT NULL,
+  "task_id" int NOT NULL,
+  "is_deleted" boolean NOT NULL DEFAULT FALSE
+);
+
+CREATE TABLE "modification_objects" (
+  "id" SERIAL PRIMARY KEY,
+  "object_name" varchar
+);
+
+CREATE TABLE "modification_type" (
+  "id" SERIAL PRIMARY KEY,
+  "modification_name" varchar
+);
+
+ALTER TABLE "users" ADD FOREIGN KEY ("user_premission") REFERENCES "users_role" ("id");
+
+ALTER TABLE "bucket_members" ADD FOREIGN KEY ("user_id") REFERENCES "users" ("id");
+
+ALTER TABLE "bucket_members" ADD FOREIGN KEY ("bucket_id") REFERENCES "buckets" ("id");
+
+ALTER TABLE "tasks" ADD FOREIGN KEY ("bucket_id") REFERENCES "buckets" ("id");
+
+ALTER TABLE "notifications" ADD FOREIGN KEY ("task_id") REFERENCES "tasks" ("id");
+
+ALTER TABLE "tasks" ADD FOREIGN KEY ("priority_id") REFERENCES "priorities" ("id");
+
+ALTER TABLE "tasks" ADD FOREIGN KEY ("state_id") REFERENCES "states" ("id");
+
+ALTER TABLE "active_timers" ADD FOREIGN KEY ("user_id") REFERENCES "users" ("id");
+
+ALTER TABLE "active_timers" ADD FOREIGN KEY ("task_id") REFERENCES "tasks" ("id");
+
+ALTER TABLE "buckets" ADD FOREIGN KEY ("user_id") REFERENCES "users" ("id");
+
+ALTER TABLE "task_members" ADD FOREIGN KEY ("user_id") REFERENCES "users" ("id");
+
+ALTER TABLE "task_members" ADD FOREIGN KEY ("task_id") REFERENCES "tasks" ("id");
+
+ALTER TABLE "modifications_history" ADD FOREIGN KEY ("object_type") REFERENCES "modification_objects" ("id");
+
+ALTER TABLE "notifications" ADD FOREIGN KEY ("client_id") REFERENCES "clients" ("id");
+
+ALTER TABLE "modifications_history" ADD FOREIGN KEY ("user_id") REFERENCES "users" ("id");
+
+ALTER TABLE "modifications_history" ADD FOREIGN KEY ("modification_type") REFERENCES "modification_type" ("id");
